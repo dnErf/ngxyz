@@ -1,0 +1,12 @@
+<style>
+  .lock { width: 40%; margin: 1rem auto 4rem auto; display: block; }
+  .google { border: 1px solid #95989A; background: #fff url('assets/images/google.svg') no-repeat 25px; background-size: 25px; }
+  .error { background: #f1f0ef; padding: 1rem; width: 100%; display: block; margin-bottom: 20px; }
+  .alc { text-align: center; display: block; margin: 1rem 0;}
+</style>
+
+<div class="form-container">
+  <img src="assets/images/lock.svg" class="lock" />
+  <span class="error" *ngIf="error">{{ error }}</span>
+  <button (click)="auth.googleSignin()" class="google">Login With Google</button>
+</div>

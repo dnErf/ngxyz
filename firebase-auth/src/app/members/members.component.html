@@ -1,0 +1,17 @@
+<style>
+  .toolbar { padding: 0; width: 70%; margin-left: -35%; }
+  .page { padding: 2rem; margin: 0; }
+  .page img { margin-top:30px; }
+  .basic-btn { width: 100px; margin: 0; }
+  .header { background:#3B8598; width: 100%; }
+</style>
+
+<div class="form-container toolbar">
+  <div class="header">
+    <button (click)="auth.signOut()" class="basic-btn">Logout</button>
+  </div>
+  <div class="page" *ngIf="auth.user$ | async as user">
+    <h2>Hi {{ user.displayName }}</h2>
+    <img src="assets/images/filler.png" />
+  </div>
+</div>
